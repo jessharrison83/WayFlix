@@ -34,9 +34,8 @@ struct SearchResultsViewController: View {
             }
         }
     }
-    
-    
-    //this is the same function that is in SearchMovies.swift...need to revisit passing data between views so that I can reuse the function in SearchMovies and not repeat it in other places.
+
+    // this is the same function that is in SearchMovies.swift...need to revisit passing data between views so that I can reuse the function in SearchMovies and not repeat it in other places.
     func loadSearchResults(_ search: String) {
         let config = Config()
         let query = search.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
