@@ -17,6 +17,7 @@ final class BrowseMoviesViewModel: ObservableObject {
     static let shared = BrowseMoviesViewModel()
     
     @Published var dataIsLoaded: Bool = false
+    @Published var upcomingLoaded: Bool = false
     @Published var upcomingMovies = Movies()
     @Published var topRatedMovies = Movies()
     @Published var nowPlayingMovies = Movies()
@@ -31,6 +32,7 @@ final class BrowseMoviesViewModel: ObservableObject {
                         switch category {
                         case Categories.upcoming.rawValue:
                             self?.upcomingMovies = movies
+                            self?.upcomingLoaded = true
                         case Categories.topRated.rawValue:
                             self?.topRatedMovies = movies
                         case Categories.nowPlaying.rawValue:
@@ -44,7 +46,8 @@ final class BrowseMoviesViewModel: ObservableObject {
                     print(error)
                 }
             }
+            
         }
-
+        
     }
 }

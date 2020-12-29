@@ -35,7 +35,8 @@ struct ResultDetailView: View {
                 maxHeight: .infinity,
                 alignment: .bottomLeading
             )
-            .background(CardImageView(movieImagePath: movie.poster_path ?? nil).edgesIgnoringSafeArea(.all))
+            .background(CardImageView(movieImagePath: movie.poster_path ?? nil)
+            .edgesIgnoringSafeArea(.all))
 
         VStack(alignment: .leading) {
             HStack (alignment: .lastTextBaseline){

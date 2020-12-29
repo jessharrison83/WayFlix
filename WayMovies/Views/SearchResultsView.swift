@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SearchResultsView: View {
-    @ObservedObject var search: SearchMovies = .shared
+    @ObservedObject var search: SearchMoviesViewModel = .shared
     @State var loadedResults: Movies
     @State var text: String = ""
     var body: some View {

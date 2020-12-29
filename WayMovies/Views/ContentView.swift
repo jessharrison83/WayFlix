@@ -9,42 +9,49 @@ import SwiftUI
 
 struct ContentView: View {
     @State var text: String = ""
-    @ObservedObject var search: SearchMovies = .shared
+    
+    @ObservedObject var search: SearchMoviesViewModel = .shared
+    @ObservedObject var browse: BrowseMoviesViewModel = .shared
+    
+    
     
     var body: some View {
-        NavigationView {
-            ZStack {
-            Image(Constants.defaultImagePath)
-                .resizable()
-                .ignoresSafeArea()
-                VStack {
-                    Image(systemName: "film")
-                        .foregroundColor(.white)
-                        .aspectRatio(contentMode: .fill)
-                    HStack {
-                        TextField(Constants.searchBarText,
-                        text: $text,
-                        onCommit: { search.loadSearchResults(text) })
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                        Button(action: { search.loadSearchResults(text) }) {
-                            Image(systemName: "magnifyingglass")
-                                .foregroundColor(.white)
-                        }
-                        
-                    }
-                    .padding()
-                    NavigationLink(destination: BrowseMoviesView()) {
-                        Text(Constants.homeBrowseText)
-                            .foregroundColor(.white)
-                    }
+            NavigationView {
+                if browse.upcomingLoaded {
                     ZStack {
-                    NavigationLink("next page", destination: SearchResultsView(loadedResults: search.searchResults), isActive: self.$search.dataIsLoaded)
+                        CardImageView(movieImagePath: browse.upcomingMovies.results[Constants.index].poster_path)
+                                .ignoresSafeArea()
+                        VStack {
+                            Image(systemName: "film")
+                                .foregroundColor(.white)
+                                .aspectRatio(contentMode: .fill)
+                            HStack {
+                                TextField(Constants.searchBarText,
+                                text: $text,
+                                onCommit: { search.loadSearchResults(text) })
+                                .textFieldStyle(RoundedBorderTextFieldStyle())
+                                Button(action: { search.loadSearchResults(text) }) {
+                                    Image(systemName: "magnifyingglass")
+                                        .foregroundColor(.white)
+                                }
+                                
+                            }
+                            .padding()
+                            NavigationLink(destination: BrowseMoviesView()) {
+                                Text(Constants.homeBrowseText)
+                                    .foregroundColor(.white)
+                            }
+                            ZStack {
+                            NavigationLink("next page", destination: SearchResultsView(loadedResults: search.searchResults), isActive: self.$search.dataIsLoaded)
+                            }
+                                .hidden()
+                        }
                     }
-                        .hidden()
+                } else {
+                    Text(Constants.loadText)
                 }
             }
-        }
-            .navigationViewStyle(StackNavigationViewStyle())
-            .accentColor(.black)
+                .navigationViewStyle(StackNavigationViewStyle())
+                .accentColor(.black)
     }
 }

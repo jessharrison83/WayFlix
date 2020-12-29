@@ -41,5 +41,6 @@ enum Constants {
     static let imageCornerRadius: CGFloat = 5.0
     static let smallPadding: CGFloat = 3
     static let homeBrowseText: String = "I just want to browse"
+    static let index: Int = Int.random(in: 0...5)
 }
 

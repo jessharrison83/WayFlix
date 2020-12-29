@@ -1,5 +1,5 @@
 //
-//  SearchBarView.swift
+//  SearchMoviesViewModel.swift
 //  WayMovies
 //
 //  Created by Jessica Berler on 12/15/20.
@@ -8,11 +8,11 @@
 import SwiftUI
 import Foundation
 
-final class SearchMovies: ObservableObject {
+final class SearchMoviesViewModel: ObservableObject {
     
     private init() { }
     
-    static let shared = SearchMovies()
+    static let shared = SearchMoviesViewModel()
     
     @Published var dataIsLoaded: Bool = false
     @Published var searchResults: Movies = Movies()
