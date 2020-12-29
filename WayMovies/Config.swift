@@ -21,6 +21,7 @@ enum MediaType: String {
 
 enum Constants {
     static let stackViewSpacing: CGFloat = 30
+    static let tmdbRedirectBaseURL: String = "https://www.themoviedb.org"
     static let imageBaseURL: String = "https://image.tmdb.org/t/p"
     static let movieBaseURL: String = "https://api.themoviedb.org/3/movie"
     static let multiSearchBaseURL: String = "https://api.themoviedb.org/3/search/multi"
@@ -38,7 +39,7 @@ enum Constants {
     static let unknownFieldText: String = "Unknown"
     static let searchBarText: String = "Search Movies, Actors, TV Shows"
     static let imageCornerRadius: CGFloat = 5.0
-    static let labelPadding: CGFloat = 3
+    static let smallPadding: CGFloat = 3
     static let homeBrowseText: String = "I just want to browse"
 }
 
