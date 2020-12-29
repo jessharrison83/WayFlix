@@ -7,14 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		085F34FB257549B00069C061 /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085F34FA257549B00069C061 /* SearchResultsViewController.swift */; };
-		085F3503257549CF0069C061 /* BrowseMoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085F3502257549CF0069C061 /* BrowseMoviesViewController.swift */; };
+		085F34FB257549B00069C061 /* SearchResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085F34FA257549B00069C061 /* SearchResultsView.swift */; };
+		085F3503257549CF0069C061 /* BrowseMoviesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085F3502257549CF0069C061 /* BrowseMoviesView.swift */; };
 		085F3508257549DF0069C061 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085F3507257549DF0069C061 /* Movie.swift */; };
-		085F350D257549F90069C061 /* ResultDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085F350C257549F90069C061 /* ResultDetailViewController.swift */; };
-		085F352025754AF00069C061 /* CardViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085F351F25754AF00069C061 /* CardViewControllers.swift */; };
-		085F352825754C390069C061 /* StarRatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085F352725754C390069C061 /* StarRatingViewController.swift */; };
+		085F350D257549F90069C061 /* ResultDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085F350C257549F90069C061 /* ResultDetailView.swift */; };
+		085F352825754C390069C061 /* StarRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085F352725754C390069C061 /* StarRatingView.swift */; };
 		085F3586257FB0C00069C061 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085F3585257FB0C00069C061 /* Config.swift */; };
 		085F36252589049E0069C061 /* SearchMovies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085F36242589049E0069C061 /* SearchMovies.swift */; };
+		085F36BF259AEA000069C061 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085F36BE259AEA000069C061 /* WebService.swift */; };
+		085F36C4259AEA7E0069C061 /* BrowseMoviesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085F36C3259AEA7E0069C061 /* BrowseMoviesViewModel.swift */; };
+		085F36C9259AEAA60069C061 /* CardImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085F36C8259AEAA60069C061 /* CardImageViewModel.swift */; };
+		085F36DD259AEB8B0069C061 /* CardImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085F36DC259AEB8B0069C061 /* CardImageView.swift */; };
+		085F36E2259AEBA30069C061 /* BrowseCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085F36E1259AEBA30069C061 /* BrowseCardView.swift */; };
+		085F36E7259AEBCB0069C061 /* SearchResultCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085F36E6259AEBCB0069C061 /* SearchResultCardView.swift */; };
 		086C126C256DBDA6007F6489 /* WayMoviesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086C126B256DBDA6007F6489 /* WayMoviesApp.swift */; };
 		086C126E256DBDA6007F6489 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086C126D256DBDA6007F6489 /* ContentView.swift */; };
 		086C1270256DBDA8007F6489 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 086C126F256DBDA8007F6489 /* Assets.xcassets */; };
@@ -39,14 +44,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		085F34FA257549B00069C061 /* SearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
-		085F3502257549CF0069C061 /* BrowseMoviesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseMoviesViewController.swift; sourceTree = "<group>"; };
+		085F34FA257549B00069C061 /* SearchResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsView.swift; sourceTree = "<group>"; };
+		085F3502257549CF0069C061 /* BrowseMoviesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseMoviesView.swift; sourceTree = "<group>"; };
 		085F3507257549DF0069C061 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
-		085F350C257549F90069C061 /* ResultDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultDetailViewController.swift; sourceTree = "<group>"; };
-		085F351F25754AF00069C061 /* CardViewControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewControllers.swift; sourceTree = "<group>"; };
-		085F352725754C390069C061 /* StarRatingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarRatingViewController.swift; sourceTree = "<group>"; };
+		085F350C257549F90069C061 /* ResultDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultDetailView.swift; sourceTree = "<group>"; };
+		085F352725754C390069C061 /* StarRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarRatingView.swift; sourceTree = "<group>"; };
 		085F3585257FB0C00069C061 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		085F36242589049E0069C061 /* SearchMovies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMovies.swift; sourceTree = "<group>"; };
+		085F36BE259AEA000069C061 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		085F36C3259AEA7E0069C061 /* BrowseMoviesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseMoviesViewModel.swift; sourceTree = "<group>"; };
+		085F36C8259AEAA60069C061 /* CardImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardImageViewModel.swift; sourceTree = "<group>"; };
+		085F36DC259AEB8B0069C061 /* CardImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardImageView.swift; sourceTree = "<group>"; };
+		085F36E1259AEBA30069C061 /* BrowseCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseCardView.swift; sourceTree = "<group>"; };
+		085F36E6259AEBCB0069C061 /* SearchResultCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCardView.swift; sourceTree = "<group>"; };
 		086C1268256DBDA6007F6489 /* WayMovies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WayMovies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		086C126B256DBDA6007F6489 /* WayMoviesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WayMoviesApp.swift; sourceTree = "<group>"; };
 		086C126D256DBDA6007F6489 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -86,11 +96,13 @@
 			isa = PBXGroup;
 			children = (
 				086C126D256DBDA6007F6489 /* ContentView.swift */,
-				085F350C257549F90069C061 /* ResultDetailViewController.swift */,
-				085F34FA257549B00069C061 /* SearchResultsViewController.swift */,
-				085F3502257549CF0069C061 /* BrowseMoviesViewController.swift */,
-				085F351F25754AF00069C061 /* CardViewControllers.swift */,
-				085F352725754C390069C061 /* StarRatingViewController.swift */,
+				085F350C257549F90069C061 /* ResultDetailView.swift */,
+				085F34FA257549B00069C061 /* SearchResultsView.swift */,
+				085F352725754C390069C061 /* StarRatingView.swift */,
+				085F3502257549CF0069C061 /* BrowseMoviesView.swift */,
+				085F36DC259AEB8B0069C061 /* CardImageView.swift */,
+				085F36E1259AEBA30069C061 /* BrowseCardView.swift */,
+				085F36E6259AEBCB0069C061 /* SearchResultCardView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -98,7 +110,9 @@
 		085F355225781C9B0069C061 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				085F3507257549DF0069C061 /* Movie.swift */,
+				085F36242589049E0069C061 /* SearchMovies.swift */,
+				085F36C3259AEA7E0069C061 /* BrowseMoviesViewModel.swift */,
+				085F36C8259AEAA60069C061 /* CardImageViewModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -134,7 +148,8 @@
 			children = (
 				086C126B256DBDA6007F6489 /* WayMoviesApp.swift */,
 				085F3585257FB0C00069C061 /* Config.swift */,
-				085F36242589049E0069C061 /* SearchMovies.swift */,
+				085F36BE259AEA000069C061 /* WebService.swift */,
+				085F3507257549DF0069C061 /* Movie.swift */,
 				085F355225781C9B0069C061 /* Models */,
 				085F34F9257548BC0069C061 /* Views */,
 				085F355325781CBF0069C061 /* Resources */,
@@ -281,15 +296,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				085F36BF259AEA000069C061 /* WebService.swift in Sources */,
 				085F3508257549DF0069C061 /* Movie.swift in Sources */,
-				085F352825754C390069C061 /* StarRatingViewController.swift in Sources */,
-				085F352025754AF00069C061 /* CardViewControllers.swift in Sources */,
+				085F36E2259AEBA30069C061 /* BrowseCardView.swift in Sources */,
+				085F352825754C390069C061 /* StarRatingView.swift in Sources */,
+				085F36C9259AEAA60069C061 /* CardImageViewModel.swift in Sources */,
 				085F36252589049E0069C061 /* SearchMovies.swift in Sources */,
-				085F350D257549F90069C061 /* ResultDetailViewController.swift in Sources */,
+				085F350D257549F90069C061 /* ResultDetailView.swift in Sources */,
 				085F3586257FB0C00069C061 /* Config.swift in Sources */,
+				085F36C4259AEA7E0069C061 /* BrowseMoviesViewModel.swift in Sources */,
 				086C126E256DBDA6007F6489 /* ContentView.swift in Sources */,
-				085F3503257549CF0069C061 /* BrowseMoviesViewController.swift in Sources */,
-				085F34FB257549B00069C061 /* SearchResultsViewController.swift in Sources */,
+				085F3503257549CF0069C061 /* BrowseMoviesView.swift in Sources */,
+				085F36DD259AEB8B0069C061 /* CardImageView.swift in Sources */,
+				085F34FB257549B00069C061 /* SearchResultsView.swift in Sources */,
+				085F36E7259AEBCB0069C061 /* SearchResultCardView.swift in Sources */,
 				086C126C256DBDA6007F6489 /* WayMoviesApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

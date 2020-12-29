@@ -1,5 +1,5 @@
 //
-//  DetailView.swift
+//  ResultDetailView.swift
 //  WayMovies
 //
 //  Created by Jessica Berler on 11/30/20.
@@ -7,22 +7,22 @@
 
 import SwiftUI
 
-struct ResultDetailViewController: View {
+struct ResultDetailView: View {
     let movie: Movie
     var body: some View {
         ZStack {
             VStack(alignment: .leading) {
-                Text(movie.media_type ?? "Movie")
+                Text(movie.media_type ?? Constants.unknownFieldText)
                     .fontWeight(.semibold)
                     .fontWeight(.semibold)
                     .foregroundColor(.white)
-                    .padding(3)
+                    .padding(Constants.labelPadding)
                     .background(Color.pink)
-                Text(movie.title ?? movie.name ?? "fix this")
+                Text(movie.title ?? movie.name ?? Constants.unknownFieldText)
                     .foregroundColor(.white)
                     .padding(.bottom, 2)
                 if movie.vote_average != nil {
-                    StarRatingViewController(rating: movie.vote_average!)
+                    StarRatingView(rating: movie.vote_average!)
                 }
             }
         }.padding(.bottom)
@@ -33,14 +33,15 @@ struct ResultDetailViewController: View {
                 maxHeight: .infinity,
                 alignment: .bottomLeading
             )
-            .background(CardImage(movieImagePath: movie.poster_path ?? nil).edgesIgnoringSafeArea(.all))
+            .background(CardImageView(movieImagePath: movie.poster_path ?? nil).edgesIgnoringSafeArea(.all))
 
         VStack(alignment: .leading) {
             Text("Overview")
                 .fontWeight(.bold)
                 .padding(.bottom)
-            Text(movie.overview ?? "no overview provided")
+            Text(movie.overview ?? Constants.unknownFieldText)
 
-        }.padding(.top, 25)
+        }
+            .padding(.top, 25)
     }
 }

@@ -5,14 +5,7 @@
 //  Created by Jessica Berler on 12/8/20.
 //
 import Foundation
-
-struct Config {
-    let imageBaseURL: String = "https://image.tmdb.org/t/p"
-    let movieBaseURL: String = "https://api.themoviedb.org/3/movie"
-    let multiSearchBaseURL: String = "https://api.themoviedb.org/3/search/multi"
-    // how do I store api keys safely in iOS?
-    let api: String = "71ab1b19293efe581c569c1c79d0f004"
-}
+import SwiftUI
 
 enum Categories: String {
     case nowPlaying = "now_playing"
@@ -25,3 +18,27 @@ enum MediaType: String {
     case tvShow = "tv"
     case person
 }
+
+enum Constants {
+    static let stackViewSpacing: CGFloat = 30
+    static let imageBaseURL: String = "https://image.tmdb.org/t/p"
+    static let movieBaseURL: String = "https://api.themoviedb.org/3/movie"
+    static let multiSearchBaseURL: String = "https://api.themoviedb.org/3/search/multi"
+    static let api: String = "71ab1b19293efe581c569c1c79d0f004"
+    static let starMax: Int = 5
+    static let topRatedText: String = "Top Rated Movies"
+    static let upcomingText: String = "Upcoming Movies"
+    static let nowPlayingText: String = "Now Playing"
+    static let loadText: String = "Loading..."
+    static let defaultImagePath: String = "default"
+    static let browseCardMinWidth: CGFloat = 120
+    static let browseCardMaxWidth: CGFloat = 160
+    static let browseCardMinHeight: CGFloat = 120
+    static let browseCardMaxHeight: CGFloat = 200
+    static let unknownFieldText: String = "Unknown"
+    static let searchBarText: String = "Search Movies, Actors, TV Shows"
+    static let imageCornerRadius: CGFloat = 5.0
+    static let labelPadding: CGFloat = 3
+    static let homeBrowseText: String = "I just want to browse"
+}
+
