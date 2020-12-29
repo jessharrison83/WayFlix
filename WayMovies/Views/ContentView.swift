@@ -22,9 +22,18 @@ struct ContentView: View {
                         CardImageView(movieImagePath: browse.upcomingMovies.results[Constants.index].poster_path)
                                 .ignoresSafeArea()
                         VStack {
-                            Image(systemName: "film")
+                            Image(Constants.defaultImagePath)
+                                .resizable()
                                 .foregroundColor(.white)
+                                .frame(minWidth: Constants.browseCardMinWidth, maxWidth: Constants.browseCardMaxWidth, minHeight: Constants.browseCardMinHeight, maxHeight: 160)
                                 .aspectRatio(contentMode: .fill)
+                                .padding(Constants.stackViewSpacing)
+                                
+                            Text(Constants.searchBarText)
+                                .lineLimit(nil)
+                                .multilineTextAlignment(.center)
+                                .foregroundColor(.white)
+                                .font(.title)
                             HStack {
                                 TextField(Constants.searchBarText,
                                 text: $text,
@@ -40,11 +49,14 @@ struct ContentView: View {
                             NavigationLink(destination: BrowseMoviesView()) {
                                 Text(Constants.homeBrowseText)
                                     .foregroundColor(.white)
+                                    .font(.callout)
                             }
                             ZStack {
                             NavigationLink("next page", destination: SearchResultsView(loadedResults: search.searchResults), isActive: self.$search.dataIsLoaded)
                             }
                                 .hidden()
+                            Spacer()
+                            Spacer()
                         }
                     }
                 } else {

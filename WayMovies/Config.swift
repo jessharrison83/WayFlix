@@ -20,6 +20,7 @@ enum MediaType: String {
 }
 
 enum Constants {
+    static let logoSpacing: CGFloat = 60
     static let stackViewSpacing: CGFloat = 30
     static let tmdbRedirectBaseURL: String = "https://www.themoviedb.org"
     static let imageBaseURL: String = "https://image.tmdb.org/t/p"
@@ -31,13 +32,14 @@ enum Constants {
     static let upcomingText: String = "Upcoming Movies"
     static let nowPlayingText: String = "Now Playing"
     static let loadText: String = "Loading..."
-    static let defaultImagePath: String = "default"
+    static let defaultImagePath: String = "tmdbLogo"
     static let browseCardMinWidth: CGFloat = 120
     static let browseCardMaxWidth: CGFloat = 160
     static let browseCardMinHeight: CGFloat = 120
     static let browseCardMaxHeight: CGFloat = 200
     static let unknownFieldText: String = "Unknown"
-    static let searchBarText: String = "Search Movies, Actors, TV Shows"
+    static let browseDetailLabelText: String = "Movie"
+    static let searchBarText: String = "Search Movies, Actors, and TV Shows"
     static let imageCornerRadius: CGFloat = 5.0
     static let smallPadding: CGFloat = 3
     static let homeBrowseText: String = "I just want to browse"

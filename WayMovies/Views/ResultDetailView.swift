@@ -13,7 +13,7 @@ struct ResultDetailView: View {
     var body: some View {
         ZStack {
             VStack(alignment: .leading) {
-                Text(movie.media_type ?? Constants.unknownFieldText)
+                Text(movie.media_type ?? Constants.browseDetailLabelText)
                     .fontWeight(.semibold)
                     .fontWeight(.semibold)
                     .foregroundColor(.white)
@@ -60,6 +60,14 @@ struct ResultDetailView: View {
                 .padding(.trailing, Constants.smallPadding)
             
             Text(movie.overview ?? Constants.unknownFieldText)
+            if let url = URL(string: "\(Constants.tmdbRedirectBaseURL)/\( movie.media_type ?? "movie")/\(movie.id)") {
+                Link("See more on TMDB", destination: url)
+                    .font(.callout)
+                    .foregroundColor(.blue)
+                    .padding(.top, Constants.smallPadding)
+                    .padding(.bottom, Constants.smallPadding)
+            }
+            
         }
             .padding(.top, Constants.stackViewSpacing)
     }
